@@ -13,7 +13,9 @@
  */
 
 /** Include PHPExcel */
-require_once _PS_TOOL_DIR_ . '/PHPExcel-1.8/Classes/PHPExcel.php';
+if (!class_exists('PHPExcel')) {
+    require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . "PHPExcel.php";
+}
 
 class classUpdatePrices{
     
